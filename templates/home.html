@@ -3,5 +3,17 @@
 {% block content %}
 
 <h1>Home Template</h1>
+
+<div>
+    <div>
+        {% for room in rooms %}
+            <div>
+                <h5>{{room.id}} -- {{room.name}}</h5>
+            </div>
+
+        {% endfor %}
+    </div>
+
+</div>
 {% endblock   %}
->>>>>>> cb299964f5e66c0b56e041dcaddd1e901c2c4a25
+
