@@ -25,7 +25,7 @@ class Room(models.Model):
 
 class Message(models.Model):
     user = models.ForeignKey(User, on_delete= models.CASCADE)
-    room = models.ForeignKey(Room, on_delete=models.CASCADE) # cascade when user is deleted so as to delete all tweets or messages
+    room = models.ForeignKey(Room, on_delete=models.CASCADE) # cascade - when user is deleted so as to delete all tweets or messages
     body = models.TextField()
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
