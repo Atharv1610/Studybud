@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Room
 
 # rooms = [
@@ -15,5 +14,10 @@ def home(request):
 
 def room(request,pk):
     room = Room.objects.get(id=pk)
+    print(room)
     context = {'room':room}
     return render(request,'base/room.html',context)
+
+def createRoom(request):
+    context = {}
+    return render(request, 'base/room_form.html',context)
